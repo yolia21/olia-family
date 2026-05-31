@@ -149,18 +149,6 @@ const familyDatabase = [
         description: "Aishabibi Hashim Olia was born in Rander and married her cousin Yusuf Ismail Olia, uniting the Hashimi and Ismaili branches. During the Japanese invasion of Burma in 1942, she sustained injuries while fleeing the country while pregnant. Despite these hardships, she safely delivered their son Hashim in Rander. She later migrated to Karachi, where she passed away on January 17, 1995."
     },
     {
-        id: "hashim-yusuf",
-        name: "Hashim Yusuf Olia",
-        relation: "Son of Yusuf & Aishabibi",
-        branch: "ismaili",
-        birthDate: "1942",
-        birthPlace: "Rander, Surat District, Gujarat, India (During WWII escape)",
-        deathDate: "Living / Unknown",
-        deathPlace: "N/A",
-        spouse: "Unknown",
-        description: "Hashim Yusuf Olia was born under remarkable circumstances. His mother, Aishabibi, was pregnant and injured during the hazardous 1942 wartime evacuation from Burma. She successfully completed the flight back to Rander, where Hashim was born. As the child of Yusuf Ismail Olia and Aishabibi Hashim Olia, he represents the physical embodiment of the reunified branches of the family tree."
-    },
-    {
         id: "ghulam-mohammed",
         name: "Ghulam Mohammed Olia",
         relation: "Son of Ismail Kasim Olia",
