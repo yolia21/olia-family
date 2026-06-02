@@ -256,84 +256,155 @@
                 </p>
             </div>
 
-            <!-- Interactive Visual Family Tree -->
             <h3 style="text-align: center; margin-bottom: 1.5rem; font-family: var(--font-serif); color: var(--accent-gold-bright);">Visual Genealogy Tree</h3>
             <div class="tree-wrapper">
-                <div class="tree-container">
-                    <div class="tree">
-                        <ul>
-                            <li>
-                                <div class="tree-node root-node" data-id="kasim-olia">
-                                    <span class="node-name">Kasim Olia</span>
-                                    <span class="node-title">Patriarch (b. ~1850)</span>
+                <!-- Desktop Tree (Hidden on mobile) -->
+                <div class="tree-desktop">
+                    <div class="tree-container">
+                        <div class="tree">
+                            <ul>
+                                <li>
+                                    <div class="tree-node root-node" data-id="kasim-olia">
+                                        <span class="node-name">Kasim Olia</span>
+                                        <span class="node-title">Patriarch (b. ~1850)</span>
+                                    </div>
+                                    <ul>
+                                        <!-- Hashimi Branch -->
+                                        <li>
+                                            <div class="tree-node hashimi-node" data-id="hashim-kasim">
+                                                <span class="node-name">Hashim Kasim Olia</span>
+                                                <span class="node-title">Hashimi Founder</span>
+                                                <span class="node-spouse-link">m. Rasoolbibi Piperdy</span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="tree-node hashimi-node" data-id="kasim-h">
+                                                        <span class="node-name">Kasim H. Olia</span>
+                                                        <span class="node-title">d. 1997 Karachi</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="tree-node hashimi-node" data-id="ali-hashim">
+                                                        <span class="node-name">Ali Hashim Olia</span>
+                                                        <span class="node-title">b. 1912 - d. 1978</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="tree-node hashimi-node" data-id="mohammed-hashim">
+                                                        <span class="node-name">Mohammed Hashim</span>
+                                                        <span class="node-title">b. 1912 - d. 1968</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="tree-node hashimi-node" data-id="aishabibi-hashim">
+                                                        <span class="node-name">Aishabibi Hashim</span>
+                                                        <span class="node-title">m. Yusuf Ismail</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <!-- Ismaili Branch -->
+                                        <li>
+                                            <div class="tree-node ismaili-node" data-id="ismail-kasim">
+                                                <span class="node-name">Ismail Kasim Olia</span>
+                                                <span class="node-title">Ismaili Founder</span>
+                                                <span class="node-spouse-link">m. Madam Ashraf</span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="tree-node ismaili-node" data-id="yusuf-ismail">
+                                                        <span class="node-name">Yusuf Ismail Olia</span>
+                                                        <span class="node-title">b. ~1910 - d. 1975</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="tree-node ismaili-node" data-id="ghulam-mohammed">
+                                                        <span class="node-name">Ghulam Mohammed</span>
+                                                        <span class="node-title">Died in Rander</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="tree-node ismaili-node" data-id="kasim-ismail">
+                                                        <span class="node-name">Kasim Ismail Olia</span>
+                                                        <span class="node-title">Descendants in Rander</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Vertical Tree (Visible only on mobile) -->
+                <div class="tree-mobile">
+                    <div class="mobile-tree-root">
+                        <div class="tree-node root-node" data-id="kasim-olia">
+                            <span class="node-name">Kasim Olia</span>
+                            <span class="node-title">Patriarch (b. ~1850)</span>
+                        </div>
+                        
+                        <div class="mobile-tree-connector"></div>
+                        
+                        <div class="mobile-tree-branches">
+                            <!-- Hashimi Branch -->
+                            <div class="mobile-tree-branch hashimi-branch">
+                                <div class="branch-label label-hashimi">Hashimi Branch</div>
+                                <div class="tree-node hashimi-node" data-id="hashim-kasim">
+                                    <span class="node-name">Hashim Kasim Olia</span>
+                                    <span class="node-title">Founder</span>
+                                    <span class="node-spouse-link">m. Rasoolbibi Piperdy</span>
                                 </div>
-                                <ul>
-                                    <!-- Hashimi Branch -->
-                                    <li>
-                                        <div class="tree-node hashimi-node" data-id="hashim-kasim">
-                                            <span class="node-name">Hashim Kasim Olia</span>
-                                            <span class="node-title">Hashimi Founder</span>
-                                            <span class="node-spouse-link">m. Rasoolbibi Piperdy</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <div class="tree-node hashimi-node" data-id="kasim-h">
-                                                    <span class="node-name">Kasim H. Olia</span>
-                                                    <span class="node-title">d. 1997 Karachi</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tree-node hashimi-node" data-id="ali-hashim">
-                                                    <span class="node-name">Ali Hashim Olia</span>
-                                                    <span class="node-title">b. 1912 - d. 1978</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tree-node hashimi-node" data-id="mohammed-hashim">
-                                                    <span class="node-name">Mohammed Hashim</span>
-                                                    <span class="node-title">b. 1912 - d. 1968</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tree-node hashimi-node" data-id="aishabibi-hashim">
-                                                    <span class="node-name">Aishabibi Hashim</span>
-                                                    <span class="node-title">m. Yusuf Ismail</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <!-- Ismaili Branch -->
-                                    <li>
-                                        <div class="tree-node ismaili-node" data-id="ismail-kasim">
-                                            <span class="node-name">Ismail Kasim Olia</span>
-                                            <span class="node-title">Ismaili Founder</span>
-                                            <span class="node-spouse-link">m. Madam Ashraf</span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <div class="tree-node ismaili-node" data-id="yusuf-ismail">
-                                                    <span class="node-name">Yusuf Ismail Olia</span>
-                                                    <span class="node-title">b. ~1910 - d. 1975</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tree-node ismaili-node" data-id="ghulam-mohammed">
-                                                    <span class="node-name">Ghulam Mohammed</span>
-                                                    <span class="node-title">Died in Rander</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tree-node ismaili-node" data-id="kasim-ismail">
-                                                    <span class="node-name">Kasim Ismail Olia</span>
-                                                    <span class="node-title">Descendants in Rander</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                                <div class="mobile-leaf-container">
+                                    <div class="tree-node hashimi-node" data-id="kasim-h">
+                                        <span class="node-name">Kasim H. Olia</span>
+                                        <span class="node-title">d. 1997 Karachi</span>
+                                    </div>
+                                    <div class="tree-node hashimi-node" data-id="ali-hashim">
+                                        <span class="node-name">Ali Hashim Olia</span>
+                                        <span class="node-title">b. 1912 - d. 1978</span>
+                                    </div>
+                                    <div class="tree-node hashimi-node" data-id="mohammed-hashim">
+                                        <span class="node-name">Mohammed Hashim</span>
+                                        <span class="node-title">b. 1912 - d. 1968</span>
+                                    </div>
+                                    <div class="tree-node hashimi-node" data-id="aishabibi-hashim">
+                                        <span class="node-name">Aishabibi Hashim</span>
+                                        <span class="node-title">m. Yusuf Ismail</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Ismaili Branch -->
+                            <div class="mobile-tree-branch ismaili-branch">
+                                <div class="branch-label label-ismaili">Ismaili Branch</div>
+                                <div class="tree-node ismaili-node" data-id="ismail-kasim">
+                                    <span class="node-name">Ismail Kasim Olia</span>
+                                    <span class="node-title">Founder</span>
+                                    <span class="node-spouse-link">m. Madam Ashraf</span>
+                                </div>
+                                <div class="mobile-leaf-container">
+                                    <div class="tree-node ismaili-node" data-id="yusuf-ismail">
+                                        <span class="node-name">Yusuf Ismail Olia</span>
+                                        <span class="node-title">b. ~1910 - d. 1975</span>
+                                    </div>
+                                    <div class="tree-node ismaili-node" data-id="ghulam-mohammed">
+                                        <span class="node-name">Ghulam Mohammed</span>
+                                        <span class="node-title">Died in Rander</span>
+                                    </div>
+                                    <div class="tree-node ismaili-node" data-id="kasim-ismail">
+                                        <span class="node-name">Kasim Ismail Olia</span>
+                                        <span class="node-title">Descendants in Rander</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
             </div>

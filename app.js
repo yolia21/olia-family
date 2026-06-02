@@ -197,25 +197,41 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mobile Menu toggling
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("nav-menu");
+    
+    // Create mobile menu overlay
+    const menuOverlay = document.createElement("div");
+    menuOverlay.classList.add("menu-overlay");
+    document.body.appendChild(menuOverlay);
+
     navToggle.addEventListener("click", () => {
-        navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-        if (navMenu.style.display === "flex") {
-            navMenu.style.flexDirection = "column";
-            navMenu.style.position = "absolute";
-            navMenu.style.top = "100%";
-            navMenu.style.left = "0";
-            navMenu.style.width = "100%";
-            navMenu.style.background = "rgba(5, 8, 8, 0.95)";
-            navMenu.style.padding = "2rem";
-            navMenu.style.gap = "1.5rem";
-            navMenu.style.borderBottom = "1px solid var(--accent-gold)";
+        navMenu.classList.toggle("open");
+        menuOverlay.classList.toggle("active");
+        
+        if (navMenu.classList.contains("open")) {
+            navToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+        } else {
+            navToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
         }
+    });
+
+    // Close menu function
+    function closeMenu() {
+        navMenu.classList.remove("open");
+        menuOverlay.classList.remove("active");
+        navToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+    }
+
+    menuOverlay.addEventListener("click", closeMenu);
+    
+    // Close menu when clicking nav links
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", closeMenu);
     });
 
     // Reset mobile menu layout on screen resize
     window.addEventListener("resize", () => {
         if (window.innerWidth > 768) {
-            navMenu.removeAttribute("style");
+            closeMenu();
         }
     });
 
