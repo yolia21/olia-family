@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --color-bg-primary: #050808;
+  --color-bg-secondary: #0b1110;
+  --color-accent-gold: #c5a880;
+  --color-accent-gold-bright: #d4af37;
+  --color-accent-gold-dark: #8c7355;
+  --color-accent-emerald: #0c3e2f;
+  --color-accent-emerald-light: #185e49;
+  --color-accent-emerald-glow: #10b981;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+  --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --background: #050808;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  background-image: radial-gradient(circle at 50% 0%, #0d1e1a 0%, #050808 100%);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050808;
+}
+::-webkit-scrollbar-thumb {
+  background: #185e49;
+  border-radius: 4px;
+  border: 2px solid #050808;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+/* Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(11, 18, 16, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c5a880, transparent);
+  opacity: 0.7;
+}
+
+/* Parchment Historical Leaflet Filter */
+.leaflet-parchment-layer {
+  filter: sepia(0.6) contrast(1.1) brightness(0.9) hue-rotate(-15deg) !important;
+}
+
+.leaflet-container {
+  background: #0b1110 !important;
+  border: 1px solid rgba(197, 168, 128, 0.2) !important;
+  border-radius: 8px;
+}
+
+/* Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+  background: rgba(11, 18, 16, 0.95) !important;
+  border: 1px solid #c5a880 !important;
+  color: #f8fafc !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+.leaflet-popup-tip {
+  background: rgba(11, 18, 16, 0.95) !important;
+  border-left: 1px solid #c5a880 !important;
+  border-bottom: 1px solid #c5a880 !important;
+}
+
+/* Custom Leaflet Controls Style */
+.leaflet-bar a {
+  background-color: rgba(11, 18, 16, 0.9) !important;
+  color: #c5a880 !important;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.2) !important;
+}
+.leaflet-bar a:hover {
+  background-color: #0c3e2f !important;
+  color: #f8fafc !important;
+}
+
+/* CSS Hierarchical Tree structure (Desktop) */
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 10px 0 10px;
+  transition: all 0.5s;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #c5a880;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #c5a880;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #c5a880;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #c5a880;
+  width: 0;
+  height: 20px;
+}
